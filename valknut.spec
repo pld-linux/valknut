@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(hu) %{_datadir}/dcgui/translation/dcgui.hu.qm
 %lang(is) %{_datadir}/dcgui/translation/dcgui.is.qm
 %lang(it) %{_datadir}/dcgui/translation/dcgui.it.qm
-%lang(no) %{_datadir}/dcgui/translation/dcgui.nb.qm
+%lang(nb) %{_datadir}/dcgui/translation/dcgui.nb.qm
 %lang(nl) %{_datadir}/dcgui/translation/dcgui.nl.qm
 %lang(pl) %{_datadir}/dcgui/translation/dcgui.pl.qm
 %lang(ro) %{_datadir}/dcgui/translation/dcgui.ro.qm
