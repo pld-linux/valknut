@@ -14,6 +14,7 @@ BuildRequires:	automake
 BuildRequires:	dclib-devel = %{version}
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
+BuildRequires:	bzip2-devel
 BuildRequires:	qt-devel >= 3.0.5
 Requires:	dclib >= %{version}
 Provides:	dcgui
