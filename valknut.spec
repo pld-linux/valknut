@@ -1,12 +1,12 @@
 Summary:	dcgui-qt - QT Direct Connect client
 Summary(pl):	dcgui-qt - klient Direct Connecta oparty o QT
 Name:		dcgui-qt
-Version:	0.2.19
+Version:	0.2.20
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	3a7421a265e2b5d95257a84033d16c98
+# Source0-md5:	c2242dd3deae9213fbf112ad7b663be2
 Source1:	%{name}.desktop
 URL:		http://dc.ketelhot.de/
 BuildRequires:	autoconf
@@ -71,4 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv) %{_datadir}/dcgui/translation/dcgui.sv.qm
 %lang(sk) %{_datadir}/dcgui/translation/dcgui.sk.qm
 %lang(lv) %{_datadir}/dcgui/translation/dcgui.lv.qm
+%lang(rus) %{_datadir}/dcgui/translation/dcgui.rus.qm
 %{_applnkdir}/Network/Communications/%{name}.desktop
