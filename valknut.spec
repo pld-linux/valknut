@@ -49,9 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README TODO
 %attr(755,root,root) %{_bindir}/*
-%dir %{_datadir}/%{name}
-%dir %{_datadir}/%{name}/emoticons
-%dir %{_datadir}/%{name}/translation
-%attr(644,root,root) %{_datadir}/%{name}/translation/*.qm
-%attr(644,root,root) %{_datadir}/%{name}/emoticons/*
+%dir %{_datadir}/dcgui
+%dir %{_datadir}/dcgui/emoticons
+%dir %{_datadir}/dcgui/translation
+%attr(644,root,root) %{_datadir}/dcgui/translation/*.qm
+%attr(644,root,root) %{_datadir}/dcgui/emoticons/*
 %{_applnkdir}/Network/Communications/%{name}.desktop
