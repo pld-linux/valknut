@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=dcgui
-Name[pl]=dcgui
+Name=dcgui-qt
+Name[pl]=dcgui-qt
 Comment=Direct Connect client
-Comment[pl]=Kient Direct Connect
+Comment[pl]=Klient Direct Connect
 Icon=dcgui-qt.png
 Exec=dcgui-qt
 Terminal=false
