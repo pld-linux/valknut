@@ -16,6 +16,7 @@ BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
 BuildRequires:	qt-devel >= 3.0.5
 Requires:	dclib >= %{version}
+Provides:	dcgui
 Obsoletes:	dcgui
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
