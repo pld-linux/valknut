@@ -1,12 +1,14 @@
+%define _snap   040521
 Summary:	dcgui-qt - QT Direct Connect client
 Summary(pl):	dcgui-qt - klient Direct Connecta oparty o QT
 Name:		dcgui-qt
-Version:	0.2.22
+Version:	0.3
 Release:	3
 License:	GPL v2
 Group:		X11/Applications/Networking
-Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	636e5bc7e180cebd822835d3167ff65e
+Source0:        http://dcgui.berlios.de/files/dcgui/snapshot/dc-source-alpha-snapshot.tar.gz
+#Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
+# Source0-md5:	f2fd65496a2cc6149038e7b87a398beb
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://dcgui.berlios.de/	
@@ -28,9 +30,17 @@ QT Direct Connect client.
 Klient Direct Connecta u¿ywaj±cy biblioteki QT.
 
 %prep
-%setup -q
+##%setup -q
+if [ -d %{name}-%{version} ]; then
+rm -rf %{name}-%{version}
+fi
+mkdir %{name}-%{version}
+cd %{name}-%{version}
+tar xfz %{SOURCE0} -C ./
 
 %build
+cd $RPM_BUILD_DIR/%{name}-%{version}/dcgui
+%{__make} -f Makefile.dist
 cp -f /usr/share/automake/config.* admin
 %configure \
 	--enable-mt \
@@ -40,28 +50,30 @@ cp -f /usr/share/automake/config.* admin
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
+cd $RPM_BUILD_DIR/%{name}-%{version}/dcgui
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README TODO
+##%doc AUTHORS README TODO
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/dcgui
 %{_datadir}/dcgui/emoticons
 %dir %{_datadir}/dcgui/translation
+%lang(bs) %{_datadir}/dcgui/translation/dcgui.bs.qm
 %lang(cs) %{_datadir}/dcgui/translation/dcgui.cs.qm
 %lang(da) %{_datadir}/dcgui/translation/dcgui.da.qm
 %lang(de) %{_datadir}/dcgui/translation/dcgui.de.qm
 %lang(en_GB) %{_datadir}/dcgui/translation/dcgui.en_GB.qm
+%lang(el) %{_datadir}/dcgui/translation/dcgui.el.qm
 %lang(es) %{_datadir}/dcgui/translation/dcgui.es.qm
 %lang(fi) %{_datadir}/dcgui/translation/dcgui.fi.qm
 %lang(fr) %{_datadir}/dcgui/translation/dcgui.fr.qm
