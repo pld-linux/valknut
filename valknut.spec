@@ -68,8 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %lang(nl) %{_datadir}/dcgui/translation/dcgui.nl.qm
 %lang(pl) %{_datadir}/dcgui/translation/dcgui.pl.qm
 %lang(ro) %{_datadir}/dcgui/translation/dcgui.ro.qm
+%lang(ru) %{_datadir}/dcgui/translation/dcgui.rus.qm
 %lang(sv) %{_datadir}/dcgui/translation/dcgui.sv.qm
 %lang(sk) %{_datadir}/dcgui/translation/dcgui.sk.qm
 %lang(lv) %{_datadir}/dcgui/translation/dcgui.lv.qm
-%lang(rus) %{_datadir}/dcgui/translation/dcgui.rus.qm
 %{_applnkdir}/Network/Communications/%{name}.desktop
