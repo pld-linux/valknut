@@ -2,20 +2,21 @@ Summary:	dcgui-qt - QT Direct Connect client
 Summary(pl):	dcgui-qt - klient Direct Connecta oparty o QT
 Name:		dcgui-qt
 Version:	0.2.22
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
 # Source0-md5:	636e5bc7e180cebd822835d3167ff65e
 Source1:	%{name}.desktop
-URL:		http://dc.ketelhot.de/
+Source2:	%{name}.png
+URL:		http://dcgui.berlios.de/	
 BuildRequires:	automake
 BuildRequires:	dclib-devel = %{version}
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
 BuildRequires:	bzip2-devel
 BuildRequires:	qt-devel >= 3.0.5
-Requires:	dclib >= %{version}
+Requires:	dclib = %{version}
 Provides:	dcgui
 Obsoletes:	dcgui
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -39,12 +40,13 @@ cp -f /usr/share/automake/config.* admin
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_desktopdir}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -75,3 +77,4 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sk) %{_datadir}/dcgui/translation/dcgui.sk.qm
 %lang(lv) %{_datadir}/dcgui/translation/dcgui.lv.qm
 %{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png
