@@ -1,12 +1,12 @@
-Summary:	dcgui-qt - QT Direct Connect client
-Summary(pl):	dcgui-qt - klient Direct Connecta oparty o QT
-Name:		dcgui-qt
-Version:	0.3.2
-Release:	6
+Summary:	valknut - QT Direct Connect client
+Summary(pl):	valknut - klient Direct Connecta oparty o QT
+Name:		valknut
+Version:	0.3.3
+Release:	0.1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	079492b0ecf7cb680661a0009d5b15b3
+# Source0-md5:	9dec886dd9aa48bfac85019a57bf8c29
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://dcgui.berlios.de/	
@@ -18,8 +18,8 @@ BuildRequires:	bzip2-devel
 BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	qt-linguist
 Requires:	dclib = 1:%{version}
-Provides:	dcgui
 Obsoletes:	dcgui
+Obsoletes:	dcgui-qt <= 0.3.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,6 +50,8 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+mv $RPM_BUILD_ROOT%{_datadir}/%{name}/translation/%{name}.pt_{br,BR}.qm
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
@@ -60,29 +62,30 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_bindir}/*
-%dir %{_datadir}/dcgui
-%{_datadir}/dcgui/icons
-%{_datadir}/dcgui/sounds
-%dir %{_datadir}/dcgui/translation
-%lang(bs) %{_datadir}/dcgui/translation/dcgui.bs.qm
-%lang(cs) %{_datadir}/dcgui/translation/dcgui.cs.qm
-%lang(da) %{_datadir}/dcgui/translation/dcgui.da.qm
-%lang(de) %{_datadir}/dcgui/translation/dcgui.de.qm
-%lang(en_GB) %{_datadir}/dcgui/translation/dcgui.en_GB.qm
-%lang(el) %{_datadir}/dcgui/translation/dcgui.el.qm
-%lang(es) %{_datadir}/dcgui/translation/dcgui.es.qm
-%lang(fi) %{_datadir}/dcgui/translation/dcgui.fi.qm
-%lang(fr) %{_datadir}/dcgui/translation/dcgui.fr.qm
-%lang(hu) %{_datadir}/dcgui/translation/dcgui.hu.qm
-%lang(is) %{_datadir}/dcgui/translation/dcgui.is.qm
-%lang(it) %{_datadir}/dcgui/translation/dcgui.it.qm
-%lang(nb) %{_datadir}/dcgui/translation/dcgui.nb.qm
-%lang(nl) %{_datadir}/dcgui/translation/dcgui.nl.qm
-%lang(pl) %{_datadir}/dcgui/translation/dcgui.pl.qm
-%lang(ro) %{_datadir}/dcgui/translation/dcgui.ro.qm
-%lang(ru) %{_datadir}/dcgui/translation/dcgui.rus.qm
-%lang(sv) %{_datadir}/dcgui/translation/dcgui.sv.qm
-%lang(sk) %{_datadir}/dcgui/translation/dcgui.sk.qm
-%lang(lv) %{_datadir}/dcgui/translation/dcgui.lv.qm
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/icons
+%{_datadir}/%{name}/sounds
+%dir %{_datadir}/%{name}/translation
+%lang(bs) %{_datadir}/%{name}/translation/%{name}.bs.qm
+%lang(cs) %{_datadir}/%{name}/translation/%{name}.cs.qm
+%lang(da) %{_datadir}/%{name}/translation/%{name}.da.qm
+%lang(de) %{_datadir}/%{name}/translation/%{name}.de.qm
+%lang(en_GB) %{_datadir}/%{name}/translation/%{name}.en_GB.qm
+%lang(el) %{_datadir}/%{name}/translation/%{name}.el.qm
+%lang(es) %{_datadir}/%{name}/translation/%{name}.es.qm
+%lang(fi) %{_datadir}/%{name}/translation/%{name}.fi.qm
+%lang(fr) %{_datadir}/%{name}/translation/%{name}.fr.qm
+%lang(hu) %{_datadir}/%{name}/translation/%{name}.hu.qm
+%lang(is) %{_datadir}/%{name}/translation/%{name}.is.qm
+%lang(it) %{_datadir}/%{name}/translation/%{name}.it.qm
+%lang(nb) %{_datadir}/%{name}/translation/%{name}.nb.qm
+%lang(nl) %{_datadir}/%{name}/translation/%{name}.nl.qm
+%lang(pl) %{_datadir}/%{name}/translation/%{name}.pl.qm
+%lang(pt_BR) %{_datadir}/%{name}/translation/%{name}.pt_BR.qm
+%lang(ro) %{_datadir}/%{name}/translation/%{name}.ro.qm
+%lang(ru) %{_datadir}/%{name}/translation/%{name}.rus.qm
+%lang(sv) %{_datadir}/%{name}/translation/%{name}.sv.qm
+%lang(sk) %{_datadir}/%{name}/translation/%{name}.sk.qm
+%lang(lv) %{_datadir}/%{name}/translation/%{name}.lv.qm
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
