@@ -32,7 +32,8 @@ Klient Direct Connecta u¿ywaj±cy biblioteki QT.
 %build
 cp -f /usr/share/automake/config.* admin
 %configure \
-	--enable-mt
+	--enable-mt \
+	--with-qt-libraries=%{_libdir}
 
 %{__make}
 
