@@ -8,5 +8,5 @@ Icon=dcgui.png
 Exec=dcgui-qt
 Terminal=false
 Type=Application
-
+Categories=Qt;Network;FileTransfer;P2P;
 # vi: encoding=utf-8
