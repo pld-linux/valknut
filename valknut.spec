@@ -22,8 +22,6 @@ Provides:	dcgui
 Obsoletes:	dcgui
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_desktopdir	%{_applnkdir}/Network/Communications
-
 %description
 QT Direct Connect client.
 
