@@ -9,7 +9,6 @@ Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
 # Source0-md5:	208176fd00286ed8f110cbe6b3cad9cc
 Source1:	%{name}.desktop
 URL:		http://dc.ketelhot.de/
-BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dclib-devel = %{version}
 BuildRequires:	libtool
@@ -31,20 +30,20 @@ Klient Direct Connecta u¿ywaj±cy biblioteki QT.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.* admin
 %configure \
-	CPPFLAGS="-I%{_includedir}" \
 	--enable-mt
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/Communications/
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/Communications/
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -74,4 +73,4 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv) %{_datadir}/dcgui/translation/dcgui.sv.qm
 %lang(sk) %{_datadir}/dcgui/translation/dcgui.sk.qm
 %lang(lv) %{_datadir}/dcgui/translation/dcgui.lv.qm
-%{_applnkdir}/Network/Communications/%{name}.desktop
+%{_desktopdir}/%{name}.desktop
