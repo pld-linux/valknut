@@ -1,12 +1,12 @@
 Summary:	dcgui-qt - QT Direct Connect client
 Summary(pl):	dcgui-qt - klient Direct Connecta oparty o QT
 Name:		dcgui-qt
-Version:	0.3.1
+Version:	0.3.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	675e80dcf9fa5c19b3397da1de20492f
+# Source0-md5:	079492b0ecf7cb680661a0009d5b15b3
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://dcgui.berlios.de/	
