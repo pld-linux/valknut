@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=valknut
+Name[pl]=valknut
+Comment=Direct Connect client
+Comment[pl]=Klient Direct Connect
+Icon=valknut.png
+Exec=valknut
+Terminal=false
+Type=Application
+Categories=Qt;Network;P2P;
+# vi: encoding=utf-8
