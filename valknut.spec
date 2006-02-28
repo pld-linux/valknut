@@ -9,12 +9,12 @@ Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
 # Source0-md5:	848f9b3f25af15c3f1837133ac4b9415
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-URL:		http://dcgui.berlios.de/	
+URL:		http://dcgui.berlios.de/
 BuildRequires:	automake
+BuildRequires:	bzip2-devel
 BuildRequires:	dclib-devel = 1:%{version}
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
-BuildRequires:	bzip2-devel
 BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	qt-linguist
 Requires:	dclib = 1:%{version}
