@@ -9,6 +9,7 @@ Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
 # Source0-md5:	848f9b3f25af15c3f1837133ac4b9415
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-gcc4.patch
 URL:		http://dcgui.berlios.de/
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
@@ -30,6 +31,7 @@ Klient Direct Connecta u¿ywaj±cy biblioteki QT.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.* admin
