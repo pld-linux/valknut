@@ -1,5 +1,5 @@
 Summary:	valknut - QT Direct Connect client
-Summary(pl.UTF-8):   valknut - klient Direct Connecta oparty o QT
+Summary(pl.UTF-8):	valknut - klient Direct Connecta oparty o QT
 Name:		valknut
 Version:	0.3.8
 Release:	1
