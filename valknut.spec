@@ -1,6 +1,6 @@
 %define _snap   040521
 Summary:	dcgui-qt - QT Direct Connect client
-Summary(pl):	dcgui-qt - klient Direct Connecta oparty o QT
+Summary(pl.UTF-8):   dcgui-qt - klient Direct Connecta oparty o QT
 Name:		dcgui-qt
 Version:	0.3
 Release:	3
@@ -26,8 +26,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 QT Direct Connect client.
 
-%description -l pl
-Klient Direct Connecta u¿ywaj±cy biblioteki QT.
+%description -l pl.UTF-8
+Klient Direct Connecta uÅ¼ywajÄ…cy biblioteki QT.
 
 %prep
 ##%setup -q
