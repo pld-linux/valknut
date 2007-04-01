@@ -1,18 +1,18 @@
 Summary:	valknut - QT Direct Connect client
 Summary(pl.UTF-8):	valknut - klient Direct Connecta oparty o QT
 Name:		valknut
-Version:	0.3.8
+Version:	0.3.8.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://downloads.sourceforge.net/wxdcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	047f94ef65ba40a5303c8323a5510619
+# Source0-md5:	d012a074d7aa0db5b687ff58caa10556
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://dcgui.berlios.de/
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
-BuildRequires:	dclib-devel = 1:%{version}
+BuildRequires:	dclib-devel = 1:0.3.8
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
 BuildRequires:	qt-devel >= 3.0.5
