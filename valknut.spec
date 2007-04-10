@@ -15,7 +15,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	dclib-devel = 1:0.3.8
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
-BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	qt-devel >= 3:3.0.5
 BuildRequires:	qt-linguist
 Requires:	dclib = 1:%{version}
 Obsoletes:	dcgui
