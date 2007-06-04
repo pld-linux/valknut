@@ -1,23 +1,26 @@
+
+%define		ver	0.3.9
+%define		dclib_ver	1:%{ver}
 Summary:	valknut - QT Direct Connect client
 Summary(pl):	valknut - klient Direct Connecta oparty o QT
 Name:		valknut
-Version:	0.3.7
+Version:	%{ver}
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
-Source0:	http://download.berlios.de/dcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	848f9b3f25af15c3f1837133ac4b9415
+Source0:	http://dl.sourceforge.net/wxdcgui/%{name}-%{version}.tar.bz2
+# Source0-md5:	ff62f24ca1efd68b3c021145257bf8cf
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-URL:		http://dcgui.berlios.de/	
+URL:		http://wxdcgui.sourceforge.net/
 BuildRequires:	automake
-BuildRequires:	dclib-devel = 1:%{version}
+BuildRequires:	bzip2-devel
+BuildRequires:	dclib-devel = %{dclib_ver}
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
-BuildRequires:	bzip2-devel
-BuildRequires:	qt-devel >= 3.0.5
+BuildRequires:	qt-devel >= 3:3.0.5
 BuildRequires:	qt-linguist
-Requires:	dclib = 1:%{version}
+Requires:	dclib = %{dclib_ver}
 Obsoletes:	dcgui
 Obsoletes:	dcgui-qt <= 0.3.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
