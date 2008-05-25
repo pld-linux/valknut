@@ -1,13 +1,13 @@
 Summary:	valknut - QT Direct Connect client
 Summary(pl.UTF-8):	valknut - klient Direct Connecta oparty o QT
 Name:		valknut
-Version:	0.3.12
+Version:	0.3.13
 %define		dclib_ver	1:%{version}
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/wxdcgui/%{name}-%{version}.tar.bz2
-# Source0-md5:	913aa05a0ab9946228a6525062dd3662
+# Source0-md5:	857dcf2b9b86a6e41cd92b164504f034
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://wxdcgui.sourceforge.net/
