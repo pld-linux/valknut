@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	valknut - klient Direct Connecta oparty o QT
 Name:		valknut
 Version:	0.4.9
 %define		dclib_ver	1:0.3.23
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/wxdcgui/%{name}-%{version}.tar.bz2
@@ -87,6 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) %{_datadir}/%{name}/translation/%{name}.rus.qm
 %lang(sv) %{_datadir}/%{name}/translation/%{name}.sv.qm
 %lang(sk) %{_datadir}/%{name}/translation/%{name}.sk.qm
+%lang(sr) %{_datadir}/%{name}/translation/%{name}.sr.qm
 %lang(lv) %{_datadir}/%{name}/translation/%{name}.lv.qm
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
+%{_iconsdir}/hicolor/*/apps/valknut.png
+%{_mandir}/man1/*.1*
