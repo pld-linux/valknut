@@ -11,11 +11,16 @@ Source0:	http://dl.sourceforge.net/wxdcgui/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://wxdcgui.sourceforge.net/
+BuildRequires:	Qt3Support-devel
+BuildRequires:	QtCore-devel
+BuildRequires:	QtGui-devel
+BuildRequires:	QtNetwork-devel
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	dclib-devel = %{dclib_ver}
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel > 2.0.0
+BuildRequires:	pkgconfig
 BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
 Requires:	dclib = %{dclib_ver}
