@@ -1,0 +1,2 @@
+- fixed Requires: to dclib >= %%version instead
+  of =
